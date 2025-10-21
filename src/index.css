@@ -27,9 +27,16 @@ body {
   display: flex;
   flex-direction: column; /* ← これがないと縦並びにならない */
   justify-content: center; /* ← 垂直方向の中央揃え */
-  align-items: center;     /* ← 水平方向の中央揃え */
+  align-items: center;     
   min-width: 320px;
   min-height: 100vh;
+
+  background-image: url('C:\Users\01231013\Desktop\作品制作Ⅳ\my-pro-baseball-quiz\public\プロ野球.jpg'); 
+ 
+  background-size: contain;    
+  background-repeat: no-repeat;
+  background-position: center;
+  
 }
 
 

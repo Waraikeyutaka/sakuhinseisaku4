@@ -8,9 +8,8 @@ type Quiz = {
   correctIndex: number;
   difficulty: Difficulty;
 };
+
 const quizData: Quiz[] = [
-
-
   {
     question: 'プロ野球の正式名称は？',
     options: ['NPB', 'MLB', 'Jリーグ', 'FIFA'],
@@ -26,7 +25,7 @@ const quizData: Quiz[] = [
   {
     question: 'バッターが3回空振りした場合の処理は？',
     options: ['三振', 'フォアボール', 'アウト', 'ストライク'],
-    correctIndex: 1,
+    correctIndex: 0, // 修正：正しくは「三振」(index 0)
     difficulty: '初級',
   },
   {
@@ -72,8 +71,7 @@ const quizData: Quiz[] = [
     difficulty: '初級',
   },
 
-
-//中級
+  // 中級
   {
     question: 'パ・リーグの本拠地が福岡にある球団は？',
     options: ['福岡ソフトバンクホークス', '北海道日本ハムファイターズ', '埼玉西武ライオンズ', 'オリックス・バファローズ'],
@@ -135,8 +133,8 @@ const quizData: Quiz[] = [
     difficulty: '中級',
   },
 
-//上級
- {
+  // 上級
+  {
     question: '日本プロ野球で通算ホームラン最多記録を持つ選手は？',
     options: ['落合博満', '王貞治', '長嶋茂雄', '清原和博'],
     correctIndex: 1,
@@ -199,67 +197,65 @@ const quizData: Quiz[] = [
 
   // 超級
   {
-  question: '日本プロ野球で通算勝利数が最多の投手は？',
-  options: ['稲尾和久', '野茂英雄', '金田正一', '桑田真澄'],
-  correctIndex: 2,
-  difficulty: '超級',
-},
-{
-  question: 'プロ野球の1試合最多本塁打記録は？',
-  options: ['4本', '5本', '6本', '7本'],
-  correctIndex: 0,
-  difficulty: '超級',
-},
-{
-  question: '次のうち、ドラフト1位で指名されていない選手は？',
-  options: ['イチロー', '松坂大輔', '田中将大', '大谷翔平'],
-  correctIndex: 0,
-  difficulty: '超級',
-},
-{
-  question: 'プロ野球でサイクルヒットを最も多く達成した選手は？',
-  options: ['福留孝介', 'イチロー', '山田哲人', '張本勲'],
-  correctIndex: 2,
-  difficulty: '超級',
-},
-{
-  question: '2006年のWBC決勝戦で日本が対戦した国は？',
-  options: ['韓国', 'キューバ', 'アメリカ', 'ドミニカ共和国'],
-  correctIndex: 1,
-  difficulty: '超級',
-},
-{
-  question: 'NPB史上最長試合（延長含む）は何回まで続いた？',
-  options: ['18回', '21回', '25回', '23回'],
-  correctIndex: 1,
-  difficulty: '超級',
-},
-{
-  question: '「打率.400以上」でシーズンを終えた日本人選手は？',
-  options: ['王貞治', 'イチロー', 'ブーマー・ウェルズ', 'いない'],
-  correctIndex: 3,
-  difficulty: '超級',
-},
-{
-  question: 'セ・パ交流戦が始まったのは何年？',
-  options: ['2000年', '2002年', '2005年', '2007年'],
-  correctIndex: 2,
-  difficulty: '超級',
-},
-{
-  question: '日本人でMLB年間最多安打記録を持つ選手は？',
-  options: ['松井秀喜', '大谷翔平', 'イチロー', '福留孝介'],
-  correctIndex: 2,
-  difficulty: '超級',
-},
-{
-  question: '次のうち、プロ野球と関係が最も深い“川上哲治”の肩書きは？',
-  options: ['初代パ・リーグ会長', 'V9監督', 'セ・リーグ初代MVP', '野球殿堂初代会長'],
-  correctIndex: 1,
-  difficulty: '超級',
-},
-
-
+    question: '日本プロ野球で通算勝利数が最多の投手は？',
+    options: ['稲尾和久', '野茂英雄', '金田正一', '桑田真澄'],
+    correctIndex: 2,
+    difficulty: '超級',
+  },
+  {
+    question: 'プロ野球の1試合最多本塁打記録は？',
+    options: ['4本', '5本', '6本', '7本'],
+    correctIndex: 0,
+    difficulty: '超級',
+  },
+  {
+    question: '次のうち、ドラフト1位で指名されていない選手は？',
+    options: ['イチロー', '松坂大輔', '田中将大', '大谷翔平'],
+    correctIndex: 0,
+    difficulty: '超級',
+  },
+  {
+    question: 'プロ野球でサイクルヒットを最も多く達成した選手は？',
+    options: ['福留孝介', 'イチロー', '山田哲人', '張本勲'],
+    correctIndex: 2,
+    difficulty: '超級',
+  },
+  {
+    question: '2006年のWBC決勝戦で日本が対戦した国は？',
+    options: ['韓国', 'キューバ', 'アメリカ', 'ドミニカ共和国'],
+    correctIndex: 1,
+    difficulty: '超級',
+  },
+  {
+    question: 'NPB史上最長試合（延長含む）は何回まで続いた？',
+    options: ['18回', '21回', '25回', '23回'],
+    correctIndex: 1,
+    difficulty: '超級',
+  },
+  {
+    question: '「打率.400以上」でシーズンを終えた日本人選手は？',
+    options: ['王貞治', 'イチロー', 'ブーマー・ウェルズ', 'いない'],
+    correctIndex: 3,
+    difficulty: '超級',
+  },
+  {
+    question: 'セ・パ交流戦が始まったのは何年？',
+    options: ['2000年', '2002年', '2005年', '2007年'],
+    correctIndex: 2,
+    difficulty: '超級',
+  },
+  {
+    question: '日本人でMLB年間最多安打記録を持つ選手は？',
+    options: ['松井秀喜', '大谷翔平', 'イチロー', '福留孝介'],
+    correctIndex: 2,
+    difficulty: '超級',
+  },
+  {
+    question: '次のうち、プロ野球と関係が最も深い“川上哲治”の肩書きは？',
+    options: ['初代パ・リーグ会長', 'V9監督', 'セ・リーグ初代MVP', '野球殿堂初代会長'],
+    correctIndex: 1,
+    difficulty: '超級',
+  },
 ];
 
 function App() {
@@ -269,15 +265,16 @@ function App() {
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
-  // Audioオブジェクトを一度だけ作成
+  // Audio オブジェクト（ブラウザ環境でのみ動作）
   const correctSE = useMemo(() => new Audio('/se/クイズ正解1.mp3'), []);
   const wrongSE = useMemo(() => new Audio('/se/クイズ不正解1.mp3'), []);
   const levelSE = useMemo(() => new Audio('/se/プレゼンタイトル表示1.mp3'), []);
 
-  const filteredQuiz = quizData.filter((q) => q.difficulty === difficulty);
+  const filteredQuiz = useMemo(() => quizData.filter((q) => q.difficulty === difficulty), [difficulty]);
   const currentQuiz = filteredQuiz[currentIndex];
 
   const handleOptionClick = (index: number) => {
+    if (!currentQuiz) return;
     setSelected(index);
     if (index === currentQuiz.correctIndex) {
       correctSE.currentTime = 0;
@@ -292,7 +289,7 @@ function App() {
   const handleNext = () => {
     setSelected(null);
     if (currentIndex + 1 < filteredQuiz.length) {
-      setCurrentIndex(currentIndex + 1);
+      setCurrentIndex((prev) => prev + 1);
     } else {
       setShowResult(true);
     }
@@ -306,17 +303,15 @@ function App() {
         {(['初級', '中級', '上級', '超級'] as Difficulty[]).map((level) => (
           <button
             key={level}
-      onClick={() => {
-  levelSE.currentTime = 0;
-  levelSE.play().catch((e) => console.warn('難易度選択音声再生エラー', e));
-  setDifficulty(level);
-  setCurrentIndex(0);
-  setScore(0);
-  setSelected(null);
-  setShowResult(false);
-}}
-
-
+            onClick={() => {
+              levelSE.currentTime = 0;
+              levelSE.play().catch((e) => console.warn('難易度選択音声再生エラー', e));
+              setDifficulty(level);
+              setCurrentIndex(0);
+              setScore(0);
+              setSelected(null);
+              setShowResult(false);
+            }}
             style={{
               margin: '10px',
               padding: '12px 24px',
@@ -329,6 +324,22 @@ function App() {
             {level}
           </button>
         ))}
+      </div>
+    );
+  }
+
+  if (filteredQuiz.length === 0) {
+    return (
+      <div style={{ padding: 20, textAlign: 'center' }}>
+        <p>この難易度の問題が見つかりません。</p>
+        <button
+          onClick={() => {
+            setDifficulty(null);
+          }}
+          style={{ padding: '8px 16px' }}
+        >
+          戻る
+        </button>
       </div>
     );
   }
@@ -357,6 +368,19 @@ function App() {
     );
   }
 
+  // 現在の問題が存在することを保証
+  if (!currentQuiz) {
+    return null;
+  }
+
+  const getOptionBackground = (i: number) => {
+    if (selected === null) return 'white';
+    // 選択後は正解を緑、選択した誤答を赤で明示
+    if (i === currentQuiz.correctIndex) return 'lightgreen';
+    if (i === selected) return 'salmon';
+    return 'white';
+  };
+
   return (
     <div
       style={{
@@ -367,7 +391,9 @@ function App() {
         textAlign: 'center',
       }}
     >
-      <h2>{currentQuiz.question}</h2>
+      <h2>
+        {currentIndex + 1} / {filteredQuiz.length} 問 — {currentQuiz.question}
+      </h2>
       <ul style={{ listStyle: 'none', padding: 0 }}>
         {currentQuiz.options.map((option, i) => (
           <li key={i} style={{ marginBottom: 8 }}>
@@ -377,12 +403,7 @@ function App() {
               style={{
                 width: '100%',
                 padding: '8px 12px',
-                backgroundColor:
-                  selected === i
-                    ? i === currentQuiz.correctIndex
-                      ? 'lightgreen'
-                      : 'salmon'
-                    : 'white',
+                backgroundColor: getOptionBackground(i),
                 border: '1px solid #ccc',
                 borderRadius: 4,
                 cursor: selected === null ? 'pointer' : 'default',
@@ -393,6 +414,19 @@ function App() {
           </li>
         ))}
       </ul>
+
+      {selected !== null && (
+        <div style={{ marginTop: 12 }}>
+          {selected === currentQuiz.correctIndex ? (
+            <div style={{ fontWeight: 'bold' }}>大正解! 🎉</div>
+          ) : (
+            <div style={{ fontWeight: 'bold' }}>
+              不正解。正しい答え：{currentQuiz.options[currentQuiz.correctIndex]}
+            </div>
+          )}
+        </div>
+      )}
+
       <button
         onClick={handleNext}
         disabled={selected === null}
